@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oops — Error</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Something went wrong</h1>
+    <p><%= message %></p>
+
+    <% if (details) { %>
+      <details>
+        <summary>Details</summary>
+        <pre><%= typeof details === 'string' ? details : JSON.stringify(details, null, 2) %></pre>
+      </details>
+    <% } %>
+
+    <div class="actions">
+      <a class="btn" href="/">Try again</a>
+    </div>
+  </main>
+</body>
+</html>
